@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'AirEasy',
       theme: ThemeData(
-        primaryColor: Color(0xFF3A75C4),
-        colorScheme: ColorScheme.light(
+        primaryColor: const Color(0xFF3A75C4),
+        colorScheme: const ColorScheme.light(
           primary: Color(0xFF3A75C4),
           secondary: Color(0xFFA8DDFF),
           onPrimary: Color(0xFFFFFFFF),
@@ -22,10 +22,16 @@ class MyApp extends StatelessWidget {
           background: Color(0xFFA8DDFF),
           onBackground: Color(0xFF000000),
         ),
-        scaffoldBackgroundColor: Color(0xFFA8DDFF),
-        textTheme: TextTheme(
-          bodyText1: TextStyle(color: Color(0xFF000000)),
-          bodyText2: TextStyle(color: Color(0xFF000000)),
+        scaffoldBackgroundColor: const Color(0xFFA8DDFF),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(
+            fontFamily: 'Roboto', // Use Roboto font
+            color: Color(0xFF000000),
+          ),
+          bodyMedium: TextStyle(
+            fontFamily: 'Roboto', // Use Roboto font
+            color: Color(0xFF000000),
+          ),
         ),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
