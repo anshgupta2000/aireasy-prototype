@@ -12,6 +12,8 @@ class User {
   final String interests;
   final String role; // "passenger" or "flight attendant"
   final String? flightReference; // This can be null for flight attendants
+  final String?
+      profilePicture; // This can be null if the user hasn't added a profile picture
 
   User({
     required this.id,
@@ -27,6 +29,7 @@ class User {
     required this.interests,
     required this.role,
     this.flightReference,
+    this.profilePicture,
   });
 
   // Method to convert a User object into a map object
@@ -45,6 +48,7 @@ class User {
       'interests': interests,
       'role': role,
       'flightReference': flightReference,
+      'profilePicture': profilePicture,
     };
   }
 
@@ -64,6 +68,7 @@ class User {
       interests: map['interests'],
       role: map['role'],
       flightReference: map['flightReference'],
+      profilePicture: map['profilePicture'],
     );
   }
 }
